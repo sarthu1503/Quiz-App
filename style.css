@@ -1,0 +1,120 @@
+body {
+    background-color: #f7f9fc;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#quiz-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#an-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between buttons */
+}
+
+.answer-btn {
+    background-color: #111c21;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.answer-btn:hover {
+    background-color: #112d4a;
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+}
+
+.correct {
+    background-color: #28a745 !important;
+    /* Green */
+    color: white;
+}
+
+.incorrect {
+    background-color: #dc3545 !important;
+    /* Red */
+    color: white;
+}
+
+#next-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* Adjusted padding for better appearance */
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none;
+    /* Initially hidden */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* Added transform for hover effect */
+    text-align: center;
+    /* Centers text inside button */
+}
+
+#next-btn:hover {
+    background-color: #5a6268;
+    /* Darker shade on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+}
+
+/* Center the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Centers button horizontally */
+    margin-top: 20px;
+    /* Optional: space above the button */
+}
+
+#score,
+#timer {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Accessibility: Focus styles */
+.answer-btn:focus,
+#next-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(54, 162, 235, 0.5);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    #quiz-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
